@@ -15,12 +15,16 @@ public class Empleado {
         String nombre;
         String apelleido;
         String direccion;
+        double salario;
+        String turno;
         
         public Empleado(){
         this.id =0;
         this.nombre="";
         this.apelleido="";
         this.direccion="";
+        this.salario=0;
+        this.turno= "";
             
     }
 
@@ -29,8 +33,31 @@ public class Empleado {
         this.nombre = nombre;
         this.apelleido = apelleido;
         this.direccion = direccion;
+        this.salario = salario;
+        this.turno = turno;
     }
 
+    public double getSalario() {
+        return salario;
+    }
+
+    public void setSalario(double salario) {
+        this.salario = salario;
+    }
+
+    public String getTurno() {
+        return turno;
+    }
+
+    public void setTurno(String turno) {
+        this.turno = turno;
+    }
+
+
+    
+    
+
+    
     public int getId() {
         return id;
     }
@@ -62,7 +89,16 @@ public class Empleado {
     public void setDireccion(String direccion) {
         this.direccion = direccion;
     }
-        
+    
+    public double calcular(){
+       double total = salario;
+
+       if(turno.equalsIgnoreCase("tarde")){
+           total += 1000;
+       }
+
+       return total;
+   }
     
         
 }
