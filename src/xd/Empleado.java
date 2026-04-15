@@ -94,9 +94,12 @@ public class Empleado {
        double total = salario;
 
        if(turno.equalsIgnoreCase("tarde")){
-           total += 1000;
+           total += 8000;
+           System.out.println("ganas mas xd");
        }
-
+       else{
+           System.out.println("ganas menos F");
+       }
        return total;
    }
     
